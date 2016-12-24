@@ -12,4 +12,7 @@ lib
     then figure out database stuff and gui stuff
         maybe associate with account?
 
-    
+
+To compile: g++ -Wc++11-extensions -std=c++0x lib/xalloc.cpp lib/list.cpp lib/hash_table.cpp product.cpp test_hash.cpp
+
+

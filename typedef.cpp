@@ -118,7 +118,7 @@ int main() {
     Abstraction: separation between interface and implementation
       accomplished using public, private, protected -- access keywords
 
-    Data encapsulation -- mechanis of bundling data?
+    Data encapsulation -- mechanism of bundling data?
       data hiding
       using private is good data encapsulation
       only expose things that need to be exposed

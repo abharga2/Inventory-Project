@@ -1,3 +1,6 @@
+//  Created by Abhishek Bhargava on 1/7/17.
+//  Copyright © 2017 Abhishek Bhargava. All rights reserved.
+
 #include <iostream>
 #include <map>
 #include <cstring>
@@ -14,13 +17,12 @@
 #include "hash_table.h"
 #include "../product.h"
 
+
+//Hash table implementation
+
 using namespace std;
 
-//template class Hash<int, int>;
-/*template Hash<int, int>::Hash();
-template Hash<int, int>::~Hash();
-template Hash<struct A, int>::Hash();
-template Hash<struct A, int>::~Hash();*/
+
 
 template <typename product_id, typename product>
 Hash<product_id, product>::Hash() {
@@ -98,12 +100,16 @@ elem Hash<product_id, product>::lookup(product_id P) {
     size_t index = (size_t)(hash(P));
     assert(index < size);
     
-    if (v[index] == NULL) return NULL;
+    if (v[index] == NULL) {
+        return NULL;
+    }
+    
     list_t L = v[index];
-    //elem dat = is_id_in_list<product_id>(L, P, id_equiv);
-    //return dat;
-    return is_id_in_list(L, P, id_equiv);
-    //return NULL;
+
+    
+    elem prod = is_id_in_list(L, P, id_equiv);
+
+    return prod;
     
 }
 
@@ -127,6 +133,7 @@ elem Hash<product_id, product>::delete_elem(product_id P) {
 
 template <typename product_id, typename product>
 void Hash<product_id, product>::insert(product_id P, product x) {
+    
     elem E = (elem)x;
     size_t index = (size_t)(hash(P));
     assert(index < size);
@@ -166,18 +173,5 @@ template class Hash<string, Product<string>* >;
 template class Hash<int, Product<int>* >;
 template class Hash<long, Product<long>* >;
 template class Hash<int64_t, Product<int64_t>* >;
-
-
-/*template <typename product_id, typename product>
-product Hash<product_id, product>::lookup(product_id P) {
-    int index = (*hash_id)(P) % ((int)(size));
-    
-    ASSERT(index >= 0);
-    ASSERT(index < (int)(size));
-    
-    if (v[index] == NULL)
-        return NULL;
-    
-}*/
 
 

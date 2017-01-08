@@ -1,3 +1,6 @@
+//  Created by Abhishek Bhargava on 1/7/17.
+//  Copyright © 2017 Abhishek Bhargava. All rights reserved.
+
 #include <iostream>
 #include <map>
 #include <cstring>
@@ -11,7 +14,9 @@
 #include "lib/xalloc.h"
 #include "lib/contracts.h"
 #include "lib/list.h"
-//#include "lib/hash_table.h"
+#include "lib/hash_table.h"
+
+//Product interface
 
 #ifndef _PRODUCT_H
 #define _PRODUCT_H
@@ -35,7 +40,6 @@ class Product {
         size_t get_num();
         double get_price();
         string get_category();
-        //int hash_id(p_id P);
         void add_prod(); //Add 1 to quantity
     
         Product(p_id prod_id);

@@ -1,3 +1,6 @@
+//  Created by Abhishek Bhargava on 1/7/17.
+//  Copyright © 2017 Abhishek Bhargava. All rights reserved.
+
 #include <iostream>
 #include <map>
 #include <cstring>
@@ -12,6 +15,7 @@
 #include "lib/contracts.h"
 #include "lib/list.h"
 
+//Testing list struct
 using namespace std;
 
 void int_free(void *ptr) {

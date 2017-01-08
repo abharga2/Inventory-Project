@@ -1,3 +1,6 @@
+//  Created by Abhishek Bhargava on 1/7/17.
+//  Copyright © 2017 Abhishek Bhargava. All rights reserved.
+
 #include <iostream>
 #include <map>
 #include <cstring>
@@ -13,6 +16,8 @@
 #include "lib/list.h"
 #include "lib/hash_table.h"
 #include "product.h"
+
+//Product class implementation
 
 template <typename p_id>
 Product<p_id>::Product(p_id prod_id) {

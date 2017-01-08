@@ -1,3 +1,6 @@
+//  Created by Abhishek Bhargava on 1/7/17.
+//  Copyright © 2017 Abhishek Bhargava. All rights reserved.
+
 #include <iostream>
 #include <map>
 #include <cstring>
@@ -5,7 +8,7 @@
 #include <cstddef>
 #include <cstdint>
 
-//List interface
+/*Doubly linked list interface*/
 
 
 #ifndef _LIST_H
@@ -20,12 +23,9 @@ using namespace std;
 typedef void *elem;
 typedef void list_elem_free_fn(elem x);
 typedef void print_elem_fn(elem x);
-
-//template <class product_id>
-//using elem_equiv_fn = bool(elem x, )
 typedef bool elem_equiv_fn(elem x, elem y);
 
-//To search for product using product id
+//To search for product using product id, generic function typedef
 template <class product_id>
 using product_id_equiv_fn = bool(elem x, product_id P);
 
@@ -63,22 +63,8 @@ list_t new_list(elem E, list_elem_free_fn *F, print_elem_fn *P, elem_equiv_fn *G
 //Get new list whose first node is N
 list_t new_list(node_t N, list_elem_free_fn *F, print_elem_fn *P, elem_equiv_fn *E);
 
-/*list_t new_list(uint32_t a);
-
-list_t new_list(uint64_t a);
-
-list_t new_list(string b);*/
-
-
 //Get new node whose data field is E
 node_t new_node(elem E);
-
-/*node_t new_node(uint32_t a);
-
-node_t new_node(uint64_t a);
-
-node_t new_node(string b);*/
-
 
 
 /*Additional functions*/
@@ -105,13 +91,8 @@ bool is_in_list(list_t L, elem x);
 template <typename product_id>
 elem is_id_in_list(list_t L, product_id P, product_id_equiv_fn<product_id> *func);
 
+//Remove element from list
 elem remove_elem(list_t L, elem x);
-/*template <typename product_id>
-elem remove_elem(list_t L, product_id P, product_id_equiv)*/
 
-
-//Returns element with particular product id
-/*template <typename product_id>
-elem lookup(list_t L, product_id P);*/
 
 #endif

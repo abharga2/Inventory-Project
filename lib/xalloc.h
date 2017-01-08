@@ -5,6 +5,9 @@
  * 15-122 Principles of Imperative Computation, Fall 2010
  * Frank Pfenning
  */
+
+/*This file was originally written in C by Frank Pfenning for 15-122 - the Carnegie Mellon University data structures course. I adapted it and rewrote in C++.*/
+
 #include <cstdlib>
 #include <cstddef>
 

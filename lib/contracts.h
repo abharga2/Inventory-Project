@@ -9,6 +9,8 @@
  * included multiple times, with and without DEBUG defined.
  */
 
+/*This file was originally written in C by Frank Pfenning for 15-122 - the Carnegie Mellon University data structures course. I adapted it and rewrote in C++.*/
+
 #include <cassert>
 
 #ifdef DEBUG
